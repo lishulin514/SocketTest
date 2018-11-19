@@ -1,19 +1,18 @@
-package com.udp;
+package com.udp.test1;
 
 import java.io.IOException;
-import java.net.*;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
-import java.util.Random;
+import java.net.DatagramPacket;
+import java.net.DatagramSocket;
+import java.net.InetAddress;
 
 /**
  * UDP 搜索者，用于搜索服务支持方
  */
 public class UDPSearcher {
 
-    public static void Searcher() throws IOException {
-        System.out.println("UDPSearch Started.");
+    ri
+    public static void main(String[] args) throws IOException {
+        System.out.println("UDPProvider Started.");
 
         // 作为搜索方，让系统自动分配端口
         DatagramSocket ds = new DatagramSocket();
@@ -21,13 +20,14 @@ public class UDPSearcher {
         //构建一分回送数据
         String requestData = "HelloWord!";
         byte[] requestDataBytes = requestData.getBytes();
-        //        // 直接根据发送者构建一份回送信息
+        // 直接根据发送者构建一份回送信息
         DatagramPacket requestPacketPack = new DatagramPacket(requestDataBytes, requestDataBytes.length);
         // 本机20000端口
         requestPacketPack.setAddress(InetAddress.getLocalHost());
         requestPacketPack.setPort(20000);
         // 发送
         ds.send(requestPacketPack);
+
 
         // 构建接收实体
         final byte[] buf = new byte[512];
@@ -47,13 +47,5 @@ public class UDPSearcher {
         // 完成
         System.out.println("UDPSearcher Finished.");
         ds.close();
-    }
-
-    public static void main(String[] args) throws IOException {
-
-
-
-
-        Searcher();
     }
 }

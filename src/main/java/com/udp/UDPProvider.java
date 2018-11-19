@@ -6,7 +6,7 @@ import java.net.DatagramSocket;
 
 public class UDPProvider {
 
-    public static void main(String[] args) throws IOException {
+    public static void provider() throws IOException {
         System.out.println("UDPProvider Started.");
 
         // 作为接受者，指定一个端口用于数据接收
@@ -36,5 +36,10 @@ public class UDPProvider {
 
         System.out.println("UDPProvider Finished");
         ds.close();
+    }
+
+
+    public static void main(String[] args) throws IOException {
+        provider();
     }
 }

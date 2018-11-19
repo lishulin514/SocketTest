@@ -17,6 +17,9 @@ public class Client {
         System.out.println("已发起服务器连接，并进入后续流程~");
         System.out.println("客户端信息："+socket.getLocalAddress()+"P:"+socket.getLocalPort());
         System.out.println("服务器信息："+socket.getInetAddress()+"P:"+socket.getPort());
+
+        String s = "abcd";
+
         try{
             // 发送接收数据
             todo(socket);
