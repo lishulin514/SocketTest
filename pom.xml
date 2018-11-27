@@ -8,5 +8,11 @@
     <artifactId>SocketTest</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <!-- https://mvnrepository.com/artifact/io.netty/netty-all -->
+    <dependency>
+        <groupId>io.netty</groupId>
+        <artifactId>netty-all</artifactId>
+        <version>4.1.31.Final</version>
+    </dependency>
 
 </project>

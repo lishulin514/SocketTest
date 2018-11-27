@@ -19,7 +19,7 @@ public class MessageCreator {
     }
 
     public static String BuildWithSn(String sn){
-        return SN_HEADER;
+        return SN_HEADER+sn;
     }
 
     public static String ParseSn(String data){

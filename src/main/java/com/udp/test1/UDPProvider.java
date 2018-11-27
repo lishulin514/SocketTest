@@ -55,16 +55,16 @@ public class    UDPProvider {
 
                     // 解析端口号
                     int responsePort = MessageCreator.parsePort(data);
-
                     if(responsePort != -1){
                         //构建一份回送数据
                         String responseData = MessageCreator.BuildWithSn(sn);
                         byte[] responseDataBytes = responseData.getBytes();
+                        // 直接根据发送者构建一份回送信息
                         DatagramPacket responsePacket = new DatagramPacket(
                                 responseDataBytes,
                                 responseDataBytes.length,
                                 receiverPack.getAddress(),
-                                receiverPack.getPort());
+                                responsePort);
 
                         ds.send(responsePacket);
                     }

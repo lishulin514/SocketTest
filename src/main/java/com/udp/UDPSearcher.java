@@ -18,7 +18,7 @@ public class UDPSearcher {
         // 作为搜索方，让系统自动分配端口
         DatagramSocket ds = new DatagramSocket();
 
-        //构建一分回送数据
+        //构建一份请求数据
         String requestData = "HelloWord!";
         byte[] requestDataBytes = requestData.getBytes();
         //        // 直接根据发送者构建一份回送信息
