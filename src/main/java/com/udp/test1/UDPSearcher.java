@@ -88,7 +88,7 @@ public class UDPSearcher {
 
         private final int listenPort;
         private final CountDownLatch countDownLatch;
-        private final List<Device> devices = new ArrayList<>();
+        private final List<Device> devices = new ArrayList<Device>();
         private boolean done = false;
         private DatagramSocket ds = null;
 

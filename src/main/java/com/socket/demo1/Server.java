@@ -17,25 +17,27 @@ public class Server {
 
     public static void main(String[] args) throws IOException {
 
-        ServerSocket server = createServerSocket();
-
-        initServerSocket(server);
-
-        //绑定到本地端口上 绑定需要放在设置之后进行因为绑定端口之后再设置就会无效
-        server.bind(new InetSocketAddress(Inet4Address.getLocalHost(), PORT),50);
-
-        System.out.println("服务器准备就绪~");
-        System.out.println("服务器信息："+server.getInetAddress()+"P:"+server.getLocalPort());
-
-        // 等待客户端连接
-        for(;;){
-            // 得到客户端
-            Socket client = server.accept();
-            // 客户端构建异步线程
-            ClientHandler clientHandler = new ClientHandler(client);
-            // 启动线程
-            clientHandler.start();
-        }
+    System.out.println(Math.pow(2, 8));
+//
+//        ServerSocket server = createServerSocket();
+//
+//        initServerSocket(server);
+//
+//        //绑定到本地端口上 绑定需要放在设置之后进行因为绑定端口之后再设置就会无效
+//        server.bind(new InetSocketAddress(Inet4Address.getLocalHost(), PORT),50);
+//
+//        System.out.println("服务器准备就绪~");
+//        System.out.println("服务器信息："+server.getInetAddress()+"P:"+server.getLocalPort());
+//
+//        // 等待客户端连接
+//        for(;;){
+//            // 得到客户端
+//            Socket client = server.accept();
+//            // 客户端构建异步线程
+//            ClientHandler clientHandler = new ClientHandler(client);
+//            // 启动线程
+//            clientHandler.start();
+//        }
 
     }
 
@@ -98,31 +100,32 @@ public class Server {
 
                 byte be = byteBuffer.get();
 
-                char c = (char)byteBuffer.get();
-
-                int i = byteBuffer.getInt();
-
-                boolean b = byteBuffer.get() == 1;
-
-                long l = byteBuffer.getLong();
-
-                float f = byteBuffer.getFloat();
-
-                double d = byteBuffer.getDouble();
+                System.out.println(be);
+//                char c = (char)byteBuffer.get();
+//
+//                int i = byteBuffer.getInt();
+//
+//                boolean b = byteBuffer.get() == 1;
+//
+//                long l = byteBuffer.getLong();
+//
+//                float f = byteBuffer.getFloat();
+//
+//                double d = byteBuffer.getDouble();
 
                 // String
                 int pos = byteBuffer.position();
                 String str = new String(buffer, pos, readCount - pos -1);
-
-                System.out.println("收到数量：" + readCount + " 数据："
-                        + be+"\n"
-                        + c + "\n"
-                        + i + "\n"
-                        + b + "\n"
-                        + l + "\n"
-                        + f + "\n"
-                        + d + "\n"
-                        + str + "\n");
+//
+//                System.out.println("收到数量：" + readCount + " 数据："
+//                        + be+"\n"
+//                        + c + "\n"
+//                        + i + "\n"
+//                        + b + "\n"
+//                        + l + "\n"
+//                        + f + "\n"
+//                        + d + "\n"
+//                        + str + "\n");
 
                 outputStream.write(buffer, 0 , readCount);
                 outputStream.close();
