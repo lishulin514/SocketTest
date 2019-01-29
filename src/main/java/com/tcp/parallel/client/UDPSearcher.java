@@ -1,8 +1,8 @@
-package com.tcp.tcpChannel.client;
+package com.tcp.parallel.client;
 
 import com.ByteUtils;
-import com.udp.test2.UDPConstants;
-import com.udp.test2.client.bean.ServerInfo;
+import com.udp.search.UDPConstants;
+import com.udp.search.client.bean.ServerInfo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;

@@ -1,4 +1,4 @@
-package com.udp.test2.client.bean;
+package com.tcp.parallel.client.bean;
 
 public class ServerInfo {
     private String sn;

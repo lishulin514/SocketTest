@@ -1,6 +1,6 @@
 package com.tcp.udpSend.server;
 
-import com.udp.test2.TCPConstants;
+import com.udp.search.TCPConstants;
 
 import java.io.IOException;
 

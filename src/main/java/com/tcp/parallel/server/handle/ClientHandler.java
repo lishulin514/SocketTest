@@ -1,4 +1,4 @@
-package com.tcp.tcpChannel.server.handle;
+package com.tcp.parallel.server.handle;
 
 import com.CloseUtils;
 
@@ -91,13 +91,15 @@ public class ClientHandler {
         }
     }
 
-    class ClientWriteHandler {
+    class ClientWriteHandler{
         private boolean done = false;
         private final PrintStream printStream;
         private final ExecutorService executorService;
 
         ClientWriteHandler(OutputStream outputStream) {
             this.printStream = new PrintStream(outputStream);
+
+            // 单线程池 不需要继承Thread
             this.executorService = Executors.newSingleThreadExecutor();
         }
 

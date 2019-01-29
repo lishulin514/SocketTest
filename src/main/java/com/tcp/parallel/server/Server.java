@@ -1,12 +1,15 @@
-package com.tcp.tcpChannel.server;
+package com.tcp.parallel.server;
 
 
-import com.udp.test2.TCPConstants;
+import com.udp.search.TCPConstants;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
+/**
+ * 并行收发
+ */
 public class Server {
     public static void main(String[] args) throws IOException {
         TCPServer tcpServer = new TCPServer(TCPConstants.PORT_SERVER);
@@ -22,6 +25,7 @@ public class Server {
         String str;
         do {
             str = bufferedReader.readLine();
+            // 给所有客户端发送消息
             tcpServer.broadcast(str);
         } while (!"00bye00".equalsIgnoreCase(str));
 

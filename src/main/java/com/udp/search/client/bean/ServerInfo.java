@@ -1,4 +1,4 @@
-package com.tcp.tcpChannel.client.bean;
+package com.udp.search.client.bean;
 
 public class ServerInfo {
     private String sn;

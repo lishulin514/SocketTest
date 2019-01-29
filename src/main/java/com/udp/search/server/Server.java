@@ -1,6 +1,6 @@
-package com.udp.test2.server;
+package com.udp.search.server;
 
-import com.udp.test2.TCPConstants;
+import com.udp.search.TCPConstants;
 
 import java.io.IOException;
 

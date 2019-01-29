@@ -1,6 +1,6 @@
-package com.tcp.tcpChannel.server;
+package com.tcp.parallel.server;
 
-import com.tcp.tcpChannel.server.handle.ClientHandler;
+import com.tcp.parallel.server.handle.ClientHandler;
 
 import java.io.IOException;
 import java.net.ServerSocket;

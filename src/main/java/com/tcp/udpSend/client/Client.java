@@ -1,6 +1,6 @@
 package com.tcp.udpSend.client;
 
-import com.udp.test2.client.bean.ServerInfo;
+import com.udp.search.client.bean.ServerInfo;
 
 import java.io.IOException;
 

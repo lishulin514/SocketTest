@@ -1,8 +1,8 @@
-package com.tcp.tcpChannel.client;
+package com.tcp.parallel.client;
 
 import com.tcp.udpSend.client.TCPClient;
 import com.tcp.udpSend.client.UDPSearcher;
-import com.udp.test2.client.bean.ServerInfo;
+import com.udp.search.client.bean.ServerInfo;
 
 import java.io.IOException;
 

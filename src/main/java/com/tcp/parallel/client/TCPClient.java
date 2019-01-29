@@ -1,7 +1,7 @@
-package com.tcp.tcpChannel.client;
+package com.tcp.parallel.client;
 
 import com.CloseUtils;
-import com.udp.test2.client.bean.ServerInfo;
+import com.udp.search.client.bean.ServerInfo;
 
 import java.io.*;
 import java.net.Inet4Address;

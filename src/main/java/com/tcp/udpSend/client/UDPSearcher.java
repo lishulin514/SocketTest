@@ -2,13 +2,12 @@ package com.tcp.udpSend.client;
 
 import com.ByteUtils;
 import com.udp.UDPUtils;
-import com.udp.test2.UDPConstants;
-import com.udp.test2.client.bean.ServerInfo;
+import com.udp.search.UDPConstants;
+import com.udp.search.client.bean.ServerInfo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.InetAddress;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;

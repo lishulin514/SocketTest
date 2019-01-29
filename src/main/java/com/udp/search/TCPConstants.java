@@ -1,4 +1,4 @@
-package com.udp.test2;
+package com.udp.search;
 
 public class TCPConstants {
 

@@ -1,14 +1,13 @@
-package com.udp.test2.client;
+package com.udp.search.client;
 
 import com.ByteUtils;
 import com.udp.UDPUtils;
-import com.udp.test2.UDPConstants;
-import com.udp.test2.client.bean.ServerInfo;
+import com.udp.search.UDPConstants;
+import com.udp.search.client.bean.ServerInfo;
 
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
-import java.net.InetAddress;
 import java.nio.ByteBuffer;
 import java.util.ArrayList;
 import java.util.List;
@@ -48,6 +47,8 @@ public class ClientSearcher {
         CountDownLatch startDownLatch = new CountDownLatch(1);
         Listener listener = new Listener(LISTEN_PORT, startDownLatch, receiveLatch);
         listener.start();
+
+        // 阻塞当前线程，等待线程启动后再向下执行
         startDownLatch.await();
         return listener;
     }
@@ -69,6 +70,7 @@ public class ClientSearcher {
         private Listener(int listenPort, CountDownLatch startDownLatch, CountDownLatch receiveDownLatch) {
             super();
             this.listenPort = listenPort;
+            // 传入阻塞当前线程方法
             this.startDownLatch = startDownLatch;
             this.receiveDownLatch = receiveDownLatch;
         }
@@ -77,7 +79,7 @@ public class ClientSearcher {
         public void run() {
             super.run();
 
-            // 通知已启动
+            // 通知当前线程以启动
             startDownLatch.countDown();
             try {
                 // 监听回送端口

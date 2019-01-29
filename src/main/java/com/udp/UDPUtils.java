@@ -1,7 +1,5 @@
 package com.udp;
 
-import com.udp.test2.UDPConstants;
-
 import java.io.IOException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
